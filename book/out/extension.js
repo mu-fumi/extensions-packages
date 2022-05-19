@@ -61,16 +61,16 @@ function activate(context) {
 
   let showIcon = () => {
     const LeftStatusBar = vscode_1.window.createStatusBarItem(
-      vscode_1.StatusBarAlignment.Left,
-      9
+      vscode_1.StatusBarAlignment.Right,
+      98
     );
     LeftStatusBar.command = "extension.getPreviousPage";
     LeftStatusBar.text = " $(arrow-left) "; // 底部内容
     LeftStatusBar.show();
 
     const rightStatusBar = vscode_1.window.createStatusBarItem(
-      vscode_1.StatusBarAlignment.Left,
-      8
+      vscode_1.StatusBarAlignment.Right,
+      97
     );
     rightStatusBar.command = "extension.getNextPage";
     rightStatusBar.text = " $(arrow-right) "; // 底部内容
