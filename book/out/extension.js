@@ -60,17 +60,25 @@ function activate(context) {
   );
 
   let showIcon = () => {
-    const LeftStatusBar = vscode_1.window.createStatusBarItem(
+    const leftStatusBar = vscode_1.window.createStatusBarItem(
       vscode_1.StatusBarAlignment.Right,
       98
     );
-    LeftStatusBar.command = "extension.getPreviousPage";
-    LeftStatusBar.text = " $(arrow-left) "; // 底部内容
-    LeftStatusBar.show();
+    leftStatusBar.command = "extension.getPreviousPage";
+    leftStatusBar.text = " $(arrow-left) "; // 底部内容
+    leftStatusBar.show();
+
+    const centerStatusBar = vscode_1.window.createStatusBarItem(
+      vscode_1.StatusBarAlignment.Right,
+      97
+    );
+    centerStatusBar.command = "extension.displayCode";
+    centerStatusBar.text = " M "; // 底部内容
+    centerStatusBar.show();
 
     const rightStatusBar = vscode_1.window.createStatusBarItem(
       vscode_1.StatusBarAlignment.Right,
-      97
+      96
     );
     rightStatusBar.command = "extension.getNextPage";
     rightStatusBar.text = " $(arrow-right) "; // 底部内容
