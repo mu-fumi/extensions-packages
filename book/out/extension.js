@@ -68,21 +68,21 @@ function activate(context) {
     leftStatusBar.text = " $(arrow-left) "; // 底部内容
     leftStatusBar.show();
 
-    const centerStatusBar = vscode_1.window.createStatusBarItem(
-      vscode_1.StatusBarAlignment.Right,
-      97
-    );
-    centerStatusBar.command = "extension.displayCode";
-    centerStatusBar.text = " M "; // 底部内容
-    centerStatusBar.show();
-
     const rightStatusBar = vscode_1.window.createStatusBarItem(
       vscode_1.StatusBarAlignment.Right,
-      96
+      97
     );
     rightStatusBar.command = "extension.getNextPage";
     rightStatusBar.text = " $(arrow-right) "; // 底部内容
     rightStatusBar.show();
+
+    const centerStatusBar = vscode_1.window.createStatusBarItem(
+      vscode_1.StatusBarAlignment.Right,
+      96
+    );
+    centerStatusBar.command = "extension.displayCode";
+    centerStatusBar.text = " M "; // 底部内容
+    centerStatusBar.show();
   };
 
   context.subscriptions.push(displayCode);
